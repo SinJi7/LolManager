@@ -1,0 +1,310 @@
+.navigate {
+
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  justify-content: space-around;
+
+  text-decoration: none; 
+
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+
+  background-color: aliceblue;
+}
+.navigate a {
+  flex: 1;
+  text-decoration: none;
+  color: #000; /* 링크 색상 설정 */
+  margin: 0 10px;
+}
+
+.navigate a:hover {
+  color: #666; /* 링크 호버 시 색상 변경 */
+}
+
+.historyTb img {
+  width: 30px; 
+  height: 30px; 
+}
+
+.historyBoxB img{
+  width: 50px; 
+  height: 50px; 
+}
+
+.historyBoxR img{
+  width: 50px; 
+  height: 50px; 
+}
+
+.historyBoxB{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 128, 0.5); /* 옅은 파란색 배경색 */
+  color: #333; /* 다크모드와 비슷한 글자색 */
+  padding: 10px;
+  font-weight: bold;
+}
+.historyBoxR{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(204, 0, 0, 0.5); /* 옅은 파란색 배경색 */
+  color: #333; /* 다크모드와 비슷한 글자색 */
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* 표 전체 스타일 */
+.bluetb {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: __Roboto_2d0052, __Roboto_Fallback_2d0052, sans-serif, system-ui, sans-serif;
+}
+
+/* 열 이름 행 스타일 */
+.bluetb th {
+  background-color: rgba(0, 0, 128, 0.5); /* 옅은 파란색 배경색 */
+  color: #333; /* 다크모드와 비슷한 글자색 */
+  padding: 10px;
+  font-weight: bold;
+}
+
+.bluetb td{
+  color: white;
+  font-family: 'Noto Sans', sans-serif;
+  background-color: rgba(33, 33, 33, 0.8);
+}
+
+/* 빨간표 */
+.redtb {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: __Roboto_2d0052, __Roboto_Fallback_2d0052, sans-serif, system-ui, sans-serif;
+}
+
+.redtb th {
+  background-color: rgba(204, 0, 0, 0.5); /* 옅은 파란색 배경색 */
+  color: #333; /* 다크모드와 비슷한 글자색 */
+  padding: 10px;
+  font-weight: bold;
+}
+.redtb td{
+  color: white;
+  font-family: 'Noto Sans', sans-serif;
+  background-color: rgba(33, 33, 33, 0.8);
+}
+
+/* 설정부분 */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* input 요소 스타일 */
+.api-key-input {
+  width: 300px;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* 입력창 플레이스홀더 텍스트 스타일 */
+.api-key-input::placeholder {
+  color: #999;
+}
+
+/* 알림창 */
+
+/* Notification box */
+.notification {
+  border: 1px solid #000;
+
+  padding: 20px;
+  /* background-color: #f44336; Red */
+  color: black;
+  opacity: 1;
+  transition: opacity 0.6s; /* 600ms to fade out */
+  position: fixed; /* Fixed/sticky position */
+  top: 50%; /* Center the box vertically */
+  left: 50%; /* Center the box horizontally */
+  transform: translate(-50%, -50%); /* Use CSS3 to move the box to the center */
+  z-index: 10; /* Above all other elements */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* The close (OK) button */
+/* The close (OK) button */
+.closebtn {
+  margin-top: 15px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  /* background-color: #008CBA; Blue */
+  border: 1px solid black; /* Set border to 1px solid black */
+  padding: 10px 24px; /* Some padding */
+  text-align: center; /* Center-aligned text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Display the links inline by default */
+  font-size: 16px; /* Change text size */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* When moving the mouse over the close (OK) button */
+.closebtn:hover {
+  background-color: #001a33; /* Darken the background color */
+  color: white;
+}
+
+/* 로딩창 */
+
+/* 로딩 창의 스타일 */
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.3); /* 테두리 색상 */
+  border-top: 4px solid #000; /* 로딩 바의 색상 */
+  border-radius: 50%; /* 원형 모양으로 만들기 위해 반지름 설정 */
+  width: 40px; /* 로딩 창의 너비 */
+  height: 40px; /* 로딩 창의 높이 */
+  animation: spin 2s linear infinite; /* 회전 애니메이션 설정 */
+  margin: 50px auto; /* 화면 가운데 정렬 */
+}
+
+/* 로딩 창을 회전시키는 애니메이션 */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 검색바 */
+
+.search-container {
+  display: flex;
+  align-items: center;
+  max-width: 280px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+/* 검색 입력 필드 스타일 */
+.search-input {
+  flex: 1;
+  border: none;
+  background: none;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+/* 검색 버튼 스타일 */
+.search-button {
+  border: 1px solid #000;
+  /* background-color: #007bff; */
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.gray-button {
+  background-color: rgba(200, 200, 200, 0.7); /* 약간의 투명도를 가진 밝은 회색 배경색 */
+  color: #333; /* 글자색 */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  /* position: relative; */
+  overflow: hidden; /* 내부 요소가 넘치는 부분을 숨김 */
+}
+
+
+
+.containerS{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid grey;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8); /* 투명도 적용된 배경색 */
+}
+
+.blueTeam,
+.redTeam {
+    display: flex;
+    flex-direction: column;
+}
+
+.blueTeam input,
+.redTeam input {
+    color: white;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.blueTeam input {
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+.redTeam input{
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.blueTeam input::placeholder,
+.redTeam input::placeholder {
+  color: white;
+}
+
+.sbtn {
+  align-self: center;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+
+/* 랭크화면 */
+.rankdbord {
+  width: 300px;
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fafafa;
+  font-family: Arial, sans-serif;
+}
+
+.rankdbord p {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.rankdbord div {
+  font-size: 16px;
+  color: #666;
+}
+
+.rankdbord div br {
+  margin-bottom: 10px;
+}
